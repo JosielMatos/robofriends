@@ -1,21 +1,27 @@
-// import logo from './logo.svg';
 import './App.css';
-import Card from './components/Card';
+import { useState } from 'react';
 import { robots } from './robots'
 import SearchBox from './components/SearchBox';
+import CardsList from './components/CardsList';
 import 'tachyons';
 
 function App() {
+  const [searchField, setSearchField] = useState("");
+  const filteredRobots = robots.filter(robot => robot.name.toLowerCase().includes(searchField.toLowerCase()))
+
+  function onSearchChange(e) {
+      setSearchField(e.target.value)
+  }
+
   return (
     <main className="App">
       <header>
         <h1>RoboFriends</h1>
-        <SearchBox />
+        <SearchBox searchChange={onSearchChange} />
       </header>
-      {robots.map(robot => <Card key={robot.id} id={robot.id} name={robot.name} email={robot.email}/>)}
+      <CardsList robots={filteredRobots} />
     </main>
   );
 }
 
 export default App;
-
