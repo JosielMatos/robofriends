@@ -9,14 +9,14 @@ function App() {
   const [searchField, setSearchField] = useState("");
   const filteredRobots = robots.filter(robot => robot.name.toLowerCase().includes(searchField.toLowerCase()))
 
-  function onSearchChange(e) {
-      setSearchField(e.target.value)
+  function onSearchChange(event) {
+      setSearchField(event.target.value);
   }
 
   return (
     <main className="App">
       <header>
-        <h1>RoboFriends</h1>
+        <h1 className="f1">RoboFriends</h1>
         <SearchBox searchChange={onSearchChange} />
       </header>
       <CardsList robots={filteredRobots} />
