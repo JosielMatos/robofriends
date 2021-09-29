@@ -2,6 +2,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import SearchBox from "./components/SearchBox";
 import CardsList from "./components/CardsList";
+import Scroll from "./components/Scroll";
 import "tachyons";
 
 function App() {
@@ -29,7 +30,9 @@ function App() {
         <h1 className='f1'>RoboFriends</h1>
         <SearchBox searchChange={onSearchChange} />
       </header>
-      <CardsList robots={filteredRobots} />
+      <Scroll>
+        <CardsList robots={filteredRobots} />
+      </Scroll>
     </main>
   );
 }
