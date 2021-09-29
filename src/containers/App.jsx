@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import SearchBox from "../components/SearchBox";
 import CardsList from "../components/CardsList";
 import Scroll from "./Scroll";
+import ErrorBoundary from "../components/ErrorBoundary";
 import "tachyons";
 
 function App() {
@@ -31,7 +32,9 @@ function App() {
         <SearchBox searchChange={onSearchChange} />
       </header>
       <Scroll>
-        <CardsList robots={filteredRobots} />
+        <ErrorBoundary>
+          <CardsList robots={filteredRobots} />
+        </ErrorBoundary>
       </Scroll>
     </main>
   );
