@@ -1,8 +1,8 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import SearchBox from "./components/SearchBox";
-import CardsList from "./components/CardsList";
-import Scroll from "./components/Scroll";
+import SearchBox from "../components/SearchBox";
+import CardsList from "../components/CardsList";
+import Scroll from "./Scroll";
 import "tachyons";
 
 function App() {
