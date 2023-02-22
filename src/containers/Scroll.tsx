@@ -7,7 +7,7 @@ interface ScrollProps {
 export const Scroll = ({ children }: ScrollProps) => {
   return (
     <div
-      style={{ border: "3px solid black", height: "100vh", marginTop: "20px" }}
+      style={{ border: "3px solid black", height: "100%", marginTop: "20px" }}
     >
       {children}
     </div>
