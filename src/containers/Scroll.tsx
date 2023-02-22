@@ -1,6 +1,10 @@
-import React from "react";
+import { ReactNode } from "react";
 
-const Scroll = ({ children }) => {
+interface ScrollProps {
+  children: ReactNode;
+}
+
+export const Scroll = ({ children }: ScrollProps) => {
   return (
     <div
       style={{ border: "3px solid black", height: "100vh", marginTop: "20px" }}
@@ -9,5 +13,3 @@ const Scroll = ({ children }) => {
     </div>
   );
 };
-
-export default Scroll;

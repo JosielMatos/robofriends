@@ -1,6 +1,8 @@
-import React from "react";
+interface searchChangeProps {
+  searchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
-const SearchBox = ({ searchChange }) => {
+export const SearchBox = ({ searchChange }: searchChangeProps) => {
   return (
     <>
       <input
@@ -12,5 +14,3 @@ const SearchBox = ({ searchChange }) => {
     </>
   );
 };
-
-export default SearchBox;

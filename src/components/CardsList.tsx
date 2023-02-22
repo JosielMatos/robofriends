@@ -1,7 +1,16 @@
-import React from "react";
-import Card from "./Card";
+import { Card } from "./Card";
 
-const CardsList = ({ robots }) => {
+interface Robot {
+  id: number;
+  name: string;
+  email: string;
+}
+
+interface Robots {
+  robots: Robot[]
+}
+
+export const CardsList = ({ robots }: Robots) => {
   return (
     <>
       {robots.map((robot) => (
@@ -15,5 +24,3 @@ const CardsList = ({ robots }) => {
     </>
   );
 };
-
-export default CardsList;
