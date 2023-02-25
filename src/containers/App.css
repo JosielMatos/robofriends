@@ -24,6 +24,10 @@
   color: white;
 }
 
+header {
+  padding-top: 2rem;
+}
+
 .App-link {
   color: #61dafb;
 }
