@@ -7,7 +7,7 @@ interface Robot {
 }
 
 interface Robots {
-  robots: Robot[]
+  robots: Robot[];
 }
 
 export const CardsList = ({ robots }: Robots) => {
