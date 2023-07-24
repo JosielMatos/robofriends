@@ -35,7 +35,7 @@ function App() {
   ) : (
     <main className='App'>
       <header>
-        <h1 className='f1'>RoboFriends</h1>
+        <h1 className='f1'>Mechafriends</h1>
         <SearchBox searchChange={onSearchChange} />
       </header>
       <Scroll>
